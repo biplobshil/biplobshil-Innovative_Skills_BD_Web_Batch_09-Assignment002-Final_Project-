@@ -1,6 +1,7 @@
-# Event Booking System API
+# GatherHub
 
-A REST API for publishing events and booking tickets, built with **Django REST Framework**.
+**GatherHub** is an event booking system: a REST API for publishing events and booking
+tickets, built with **Django REST Framework**.
 
 - JWT authentication (register, login, refresh, logout)
 - Three roles: **admin**, **organizer**, **user**
@@ -11,9 +12,13 @@ A REST API for publishing events and booking tickets, built with **Django REST F
 
 | | |
 |---|---|
-| Live API | `https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app` |
-| API docs (Swagger) | `/api/docs/` |
-| Admin panel | `/admin/` |
+| Live frontend | <https://drf.biplobshil.online/> |
+| Live API | <https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app> |
+| API docs (Swagger) | <https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app/api/docs/> |
+| Health check | <https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app/api/health/> |
+| Admin panel | <https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app/admin/> |
+
+The frontend is a separate web app that consumes this API.
 
 ## Contents
 
@@ -252,7 +257,9 @@ Booking rules:
 
 ## Testing the API with Swagger
 
-Start the server (`python manage.py runserver`) and open <http://127.0.0.1:8000/api/docs/>.
+Open the live documentation at <https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app/api/docs/>,
+or start the server
+locally (`python manage.py runserver`) and open <http://127.0.0.1:8000/api/docs/>.
 Follow the steps in order: each one uses something the previous step created.
 
 **Using Swagger**
@@ -262,7 +269,7 @@ Follow the steps in order: each one uses something the previous step created.
   press **Authorize** (top right), paste it, and press Authorize.
 - **Switch account:** press **Authorize > Logout**, then paste another account's token.
 
-The flow uses three accounts: the admin (created with `createsuperuser`), an organizer and
+The flow uses three accounts: the admin (created with `createsuperuser` locally, or `ensure_admin` on the live site), an organizer and
 a normal user. An access token lasts 30 minutes; log in again if a request returns 401.
 The ids below (category 1, event 1, bookings 1 and 2, user 3) assume a fresh database.
 
@@ -390,7 +397,8 @@ Authorize with the admin token.
 
 ## Deployment
 
-Deployed on Railway with PostgreSQL.
+GatherHub is deployed on Railway with PostgreSQL, at
+<https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app>. The frontend at <https://drf.biplobshil.online/> calls this API.
 
 1. Push the repository to GitHub.
 2. On Railway: **New Project > Deploy from GitHub repo**, then add **Database > PostgreSQL**.
