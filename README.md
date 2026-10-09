@@ -11,7 +11,7 @@ A REST API for publishing events and booking tickets, built with **Django REST F
 
 | | |
 |---|---|
-| Live API | `https://<your-app>.up.railway.app` |
+| Live API | `https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app` |
 | API docs (Swagger) | `/api/docs/` |
 | Admin panel | `/admin/` |
 
