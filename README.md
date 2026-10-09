@@ -12,7 +12,7 @@ tickets, built with **Django REST Framework**.
 
 | | |
 |---|---|
-| Live frontend | <https://drf.biplobshil.online/> |
+| Live frontend | <https://gatherhub.biplobshil.online/> |
 | Live API | <https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app> |
 | API docs (Swagger) | <https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app/api/docs/> |
 | Health check | <https://biplobshil-innovativeskillsbdwebbatch09-ass-production.up.railway.app/api/health/> |
